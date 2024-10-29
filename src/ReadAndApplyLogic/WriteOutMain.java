@@ -1,5 +1,5 @@
 package ReadAndApplyLogic;
-//hej adam
+
 import java.util.Scanner;
 
 public class WriteOutMain {
