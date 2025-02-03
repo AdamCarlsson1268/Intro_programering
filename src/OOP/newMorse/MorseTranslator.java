@@ -74,20 +74,12 @@ public class MorseTranslator {
             }
         } catch (IllegalArgumentException e) {
             System.out.println("Fel: " + e.getMessage());
+            throw e;
 
         }
 
         return text.toString().trim();
     }
-//                    throw new IllegalArgumentException("Ogiltig morsekod" + letter);
-//                }
-//            }
-//            text.append(" ");
-//        }catch(IllegalArgumentException e){
-//        System.out.println("Fel: " + e.getMessage);
-//        return null;
-//    }
-//
-//        return text.toString().trim();
+
 
 }
