@@ -1,4 +1,4 @@
-package ReadAndApplyLogic;
+package assignment;
 
 import java.util.Scanner;
 

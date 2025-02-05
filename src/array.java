@@ -1,17 +1,21 @@
 import java.util.Scanner;
 
-public class array {
+/*public class array {
     public static void main(String[] args) {
 
 
-        Scanner scan = new Scanner(System.in);
-        String[] names = new String[5];
+        String text;
+        int[] numbers = {1, 2, 3, 4, 5};
 
-        for (int i = 0;i< names.length;i++){
-            names[i] = scan.nextLine();
+
+        for (int i = 0;i< numbers.length;i++) {
+            System.out.println(numbers[i]);
+
         }
-        System.out.println(names[0]);
-        System.out.println(names[4]);
+        System.out.println(text);
+
+
+
 
     }
-}
+}*/

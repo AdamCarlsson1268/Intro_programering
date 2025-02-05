@@ -26,8 +26,6 @@ public class MorseTranslator {
                 letter++;
             }
         }
-
-
     }
 
     // Metod för att översätta text till morse
@@ -40,7 +38,7 @@ public class MorseTranslator {
                 } else if (c == ' ') {
                     morseCode.append("  "); // Två mellanslag för att separera ord
                 } else {
-                    throw new IllegalArgumentException("kan ej översätta: "+ c);
+                    throw new IllegalArgumentException("kan ej översätta: " + c);
                 }
             }
         } catch (IllegalArgumentException e) {
@@ -53,24 +51,23 @@ public class MorseTranslator {
     }
 
     // Metod för att översätta morse till text
-
-
     public String morseToText(String morse) {
         StringBuilder text = new StringBuilder();
 
         try {
 
-            String[] morseWords = morse.split("  "); // Dela på ord (två mellanslag)
+            String[] morseWords = morse.split(" ");
             for (String word : morseWords) {
                 String[] morseLetters = word.split(" ");
                 for (String letter : morseLetters) {
                     if (morseToLetter.containsKey(letter)) {
                         text.append(morseToLetter.get(letter));
+                    } else if (letter.isEmpty()) { //när letter är tomt tolkas det som ett mellanslag
+                        text.append(" ");
                     } else {
                         throw new IllegalArgumentException("Ogiltig morsekod: " + letter);
                     }
                 }
-                text.append(" ");
             }
         } catch (IllegalArgumentException e) {
             System.out.println("Fel: " + e.getMessage());
